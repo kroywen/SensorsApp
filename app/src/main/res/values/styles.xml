@@ -1,0 +1,30 @@
+<resources>
+
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:actionBarStyle">@style/AppBar</item>
+    </style>
+
+    <style name="AppBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:titleTextStyle">@style/ActionbarTextStyle</item>
+        <!--<item name="android:actionMenuTextAppearance">@style/ActionBarMenuTextStyle</item>-->
+    </style>
+
+    <style name="ActionbarTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/action_bar_title</item>
+    </style>
+
+    <!--
+    <style name="ActionBarMenuTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Menu">
+        <item name="android:textColor">@color/action_bar_menu_item</item>
+    </style>
+    -->
+
+    <style name="HorizontalSeparator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/separator</item>
+    </style>
+
+</resources>

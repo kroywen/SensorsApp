@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="app_name">SensorsApp</string>
+    <string name="sensors_screen_title">Taipei Office</string>
+    <string name="scenes_screen_title">Matt\'s Home</string>
+    <string name="sensors">Sensors</string>
+    <string name="scenes">Scenes</string>
+    <string name="router">Router</string>
+    <string name="device_tampered">Device has been tampered.</string>
+    <string name="low_battery">Low battery (%1$d%%).</string>
+    <string name="new_scene">New Scene</string>
+    <string name="new_scene_description">A scene is a group of sensors and a\ndesired state of these sensors.</string>
+    <string name="choose_action">Choose one ore more Actions</string>
+    <string name="hall_lamp">Hall lamp</string>
+    <string name="bedroom_light">Bedroom Light</string>
+    <string name="thermostat">Thermostat</string>
+    <string name="cooling_temp">Cooling Temp.</string>
+    <string name="heating_temp">Heating Temp.</string>
+    <string name="auto">Auto</string>
+    <string name="heat">Heat</string>
+    <string name="cool">Cool</string>
+    <string name="fan_on">Fan On</string>
+    <string name="fan_off">Fan Off</string>
+    <string name="name_this_scene">Name this Scene</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="dim">Dim</string>
+    <string name="save">Save</string>
+    <string name="sensors_count">%1$d Sensors</string>
+
+</resources>

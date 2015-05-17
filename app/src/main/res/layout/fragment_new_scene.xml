@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/new_scene_background"
+    tools:context=".ui.fragment.NewSceneFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_inactive"
+                android:textSize="16sp"
+                android:text="@string/choose_action" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="@android:color/white">
+
+                <View style="@style/HorizontalSeparator" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/text_active"
+                    android:text="@string/hall_lamp" />
+
+                <RadioGroup
+                    android:id="@+id/hallLampRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp">
+
+                    <RadioButton
+                        android:id="@+id/hallLampOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textColor="@drawable/radiobutton_text_color"
+                        android:text="@string/on"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:button="@null"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_light_on" />
+
+                    <RadioButton
+                        android:id="@+id/hallLampOff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@drawable/radiobutton_text_color"
+                        android:text="@string/off"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:button="@null"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_light_off" />
+
+                </RadioGroup>
+
+                <View style="@style/HorizontalSeparator" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/white">
+
+                <View style="@style/HorizontalSeparator" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/text_active"
+                    android:text="@string/bedroom_light" />
+
+                <RadioGroup
+                    android:id="@+id/bedroomLightRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/bedroomLightDimContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/radiobutton_text_off">
+
+                            <ImageView
+                                android:id="@+id/invisibleFirst"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/icon_light_on_checked"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:src="@mipmap/icon_light_on_checked"
+                                android:layout_toRightOf="@id/invisibleFirst"
+                                android:visibility="invisible" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_centerInParent="true"
+                                android:gravity="top">
+
+                                <TextView
+                                    android:id="@+id/bedroomLightDimValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="46sp"
+                                    android:includeFontPadding="false"
+                                    android:text="50" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:src="@mipmap/icon_percent" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/bedroomLightDimText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@drawable/radiobutton_text_color"
+                            android:text="@string/dim"
+                            android:textSize="14sp"
+                            android:textAllCaps="true" />
+
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/bedroomLightOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@drawable/radiobutton_text_color"
+                        android:text="@string/on"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:button="@null"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_light_on" />
+
+                    <RadioButton
+                        android:id="@+id/bedroomLightOff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@drawable/radiobutton_text_color"
+                        android:text="@string/off"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:button="@null"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_light_off" />
+
+                </RadioGroup>
+
+                <View style="@style/HorizontalSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/bedroomLightDimPickerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <NumberPicker
+                        android:id="@+id/bedroomLightDimPicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View style="@style/HorizontalSeparator" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/white">
+
+                <View style="@style/HorizontalSeparator" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/text_active"
+                    android:text="@string/thermostat" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/thermostatCoolingTempContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/radiobutton_text_off">
+
+                            <ImageView
+                                android:id="@+id/invisibleFirst1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/icon_light_on_checked"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:src="@mipmap/icon_light_on_checked"
+                                android:layout_toRightOf="@id/invisibleFirst1"
+                                android:visibility="invisible" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_centerInParent="true"
+                                android:gravity="top">
+
+                                <TextView
+                                    android:id="@+id/thermostatCoolingTempValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="46sp"
+                                    android:includeFontPadding="false" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:src="@mipmap/icon_fahrenheit" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/thermostatCoolingTempText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@drawable/radiobutton_text_color"
+                            android:text="@string/cooling_temp"
+                            android:textSize="14sp"
+                            android:textAllCaps="true" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/thermostatHeatingTempContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/radiobutton_text_off">
+
+                            <ImageView
+                                android:id="@+id/invisibleFirst2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/icon_light_on_checked"
+                                android:visibility="invisible" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:src="@mipmap/icon_light_on_checked"
+                                android:layout_toRightOf="@id/invisibleFirst2"
+                                android:visibility="invisible" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_centerInParent="true"
+                                android:gravity="top">
+
+                                <TextView
+                                    android:id="@+id/thermostatHeatingTempValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="46sp"
+                                    android:includeFontPadding="false" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:src="@mipmap/icon_fahrenheit" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/thermostatHeatingTempText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@drawable/radiobutton_text_color"
+                            android:text="@string/heating_temp"
+                            android:textSize="14sp"
+                            android:textAllCaps="true" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/thermostatCoolingTempPickerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="15dp"
+                    android:visibility="gone">
+
+                    <View style="@style/HorizontalSeparator" />
+
+                    <NumberPicker
+                        android:id="@+id/thermostatCoolingTempPicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View style="@style/HorizontalSeparator" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/thermostatHeatingTempPickerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="15dp"
+                    android:visibility="gone">
+
+                    <View style="@style/HorizontalSeparator" />
+
+                    <NumberPicker
+                        android:id="@+id/thermostatHeatingTempPicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View style="@style/HorizontalSeparator" />
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/thermostatModeRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp">
+
+                    <RadioButton
+                        android:id="@+id/thermostatModeAuto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textColor="@drawable/radiobutton_text_color"
+                        android:text="@string/auto"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:button="@null"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_auto" />
+
+                    <RadioButton
+                        android:id="@+id/thermostatModeHeat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@drawable/radiobutton_text_color"
+                        android:text="@string/heat"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:button="@null"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_heat" />
+
+                    <RadioButton
+                        android:id="@+id/thermostatModeCool"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@drawable/radiobutton_text_color"
+                        android:text="@string/cool"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:button="@null"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_cool" />
+
+                    <RadioButton
+                        android:id="@+id/thermostatModeOff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@drawable/radiobutton_text_color"
+                        android:text="@string/off"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:button="@null"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_off" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/thermostatFanRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp">
+
+                    <RadioButton
+                        android:id="@+id/thermostatFanOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textColor="@drawable/radiobutton_text_color"
+                        android:text="@string/fan_on"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:button="@null"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_fan_on" />
+
+                    <RadioButton
+                        android:id="@+id/thermostatFanOff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@drawable/radiobutton_text_color"
+                        android:text="@string/fan_off"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"
+                        android:button="@null"
+                        android:drawablePadding="5dp"
+                        android:drawableTop="@drawable/ic_fan_off" />
+
+                </RadioGroup>
+
+                <View style="@style/HorizontalSeparator" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text_inactive"
+                android:textSize="16sp"
+                android:text="@string/name_this_scene" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:background="@android:color/white">
+
+                <View style="@style/HorizontalSeparator" />
+
+                <EditText
+                    android:id="@+id/sceneName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_active"
+                    android:textColorHint="@color/hint"
+                    android:maxLines="1"
+                    android:textSize="14sp"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:inputType="text|textCapSentences"
+                    android:padding="15dp"
+                    android:hint="@string/name" />
+
+                <View android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/separator"
+                    android:layout_marginLeft="10dp" />
+
+                <EditText
+                    android:id="@+id/sceneDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="3"
+                    android:maxLines="3"
+                    android:textColor="@color/text_active"
+                    android:textColorHint="@color/hint"
+                    android:textSize="14sp"
+                    android:hint="@string/description"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:padding="15dp"
+                    android:gravity="left|top" />
+
+                <View style="@style/HorizontalSeparator" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
